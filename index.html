@@ -10,39 +10,295 @@
 <body>
   <div id="landingView">
     <nav class="site-nav">
-      <a class="brand" href="#"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.2 7.2h7.6a4.7 4.7 0 0 1 4.5 3.5l1 4a3.1 3.1 0 0 1-5.2 3l-1.2-1.2H9.1l-1.2 1.2a3.1 3.1 0 0 1-5.2-3l1-4a4.7 4.7 0 0 1 4.5-3.5Z"/><path d="M8 11v4M6 13h4M16.5 11.5h.01M18.5 14h.01"/></svg></span><span>What Should I Play?</span></a>
-      <div class="nav-actions"><button class="btn small" data-enter>Start a private session</button></div>
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8.2 7.2h7.6a4.7 4.7 0 0 1 4.5 3.5l1 4a3.1 3.1 0 0 1-5.2 3l-1.2-1.2H9.1l-1.2 1.2a3.1 3.1 0 0 1-5.2-3l1-4a4.7 4.7 0 0 1 4.5-3.5Z"/><path d="M8 11v4M6 13h4M16.5 11.5h.01M18.5 14h.01"/></svg>
+        </span>
+        <span>What Should I Play?</span>
+      </a>
+      <div class="nav-actions">
+        <button class="btn small" data-enter>Start a private session</button>
+      </div>
     </nav>
+
     <main>
       <section class="hero">
-        <div class="hero-copy"><span class="eyebrow">Your backlog, decoded</span><h1>Stop scrolling.<br><span>Start playing.</span></h1><p>Connect your personal game library, tell us what kind of night you are having, and get one confident answer instead of 400 tiny decisions.</p><div class="hero-actions"><button class="btn" data-enter>Find my next game</button><a class="btn secondary" href="#howItWorks">See how it works</a></div><div class="trust-row"><span class="trust-item"><span class="trust-dot"></span>Nothing stored</span><span class="trust-item"><span class="trust-dot"></span>Your library only</span><span class="trust-item"><span class="trust-dot"></span>No launcher required</span></div></div>
-        <div class="recommendation-card" aria-label="Example recommendation"><div class="card-top"><span class="eyebrow">Tonight's pick</span><span class="live-pill">96% match</span></div><div class="fake-cover"><span style="position:relative;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;">Supergiant Games</span><h3>Hades</h3></div><div class="match-score"><strong>Fast, focused, satisfying.</strong><span>45-90 min</span></div><div class="reason">You want action without a long warm-up, a moderate challenge, and something that feels rewarding in one sitting.</div><div class="tag-row"><span class="tag">Single player</span><span class="tag">Action</span><span class="tag">Easy to resume</span></div></div>
+        <div class="hero-copy">
+          <span class="eyebrow">Your backlog, decoded</span>
+          <h1>Stop scrolling.<br><span>Start playing.</span></h1>
+          <p>Connect your personal game library, tell us what kind of night you are having, and get one confident answer instead of 400 tiny decisions.</p>
+          <div class="hero-actions">
+            <button class="btn" data-enter>Find my next game</button>
+            <a class="btn secondary" href="#howItWorks">See how it works</a>
+          </div>
+          <div class="trust-row">
+            <span class="trust-item"><span class="trust-dot"></span>Nothing stored</span>
+            <span class="trust-item"><span class="trust-dot"></span>Your library only</span>
+            <span class="trust-item"><span class="trust-dot"></span>No launcher required</span>
+          </div>
+        </div>
+
+        <div class="recommendation-card" aria-label="Example recommendation">
+          <div class="card-top">
+            <span class="eyebrow">Tonight's pick</span>
+            <span class="live-pill">96% match</span>
+          </div>
+          <div class="fake-cover">
+            <span style="position:relative;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;">Supergiant Games</span>
+            <h3>Hades</h3>
+          </div>
+          <div class="match-score">
+            <strong>Fast, focused, satisfying.</strong>
+            <span>45-90 min</span>
+          </div>
+          <div class="reason">You want action without a long warm-up, a moderate challenge, and something that feels rewarding in one sitting.</div>
+          <div class="tag-row">
+            <span class="tag">Single player</span>
+            <span class="tag">Action</span>
+            <span class="tag">Easy to resume</span>
+          </div>
+        </div>
       </section>
-      <section class="how" id="howItWorks"><div class="section-heading"><div><span class="eyebrow">Three quick steps</span><h2>A recommendation that actually knows your options.</h2></div><p>No generic listicles. Every answer is filtered through the games you already own.</p></div><div class="steps"><article class="step"><span class="step-number">1</span><h3>Bring your library</h3><p>Connect Steam or import a CSV or JSON file from any launcher, Playnite, or your own spreadsheet.</p></article><article class="step"><span class="step-number">2</span><h3>Set tonight's vibe</h3><p>Answer a short set of questions about time, energy, challenge, story, and who you are playing with.</p></article><article class="step"><span class="step-number">3</span><h3>Get one clear pick</h3><p>See the best match, why it fits, and two strong alternatives in case the first one does not click.</p></article></div></section>
+
+      <section class="how" id="howItWorks">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Three quick steps</span>
+            <h2>A recommendation that actually knows your options.</h2>
+          </div>
+          <p>No generic listicles. Every answer is filtered through the games you already own.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">1</span>
+            <h3>Bring your library</h3>
+            <p>Connect your unified Playnite library, or import a CSV or JSON file that you maintain yourself.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">2</span>
+            <h3>Set tonight's vibe</h3>
+            <p>Answer a short set of questions about time, energy, challenge, story, and who you are playing with.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">3</span>
+            <h3>Get one clear pick</h3>
+            <p>See the best match, why it fits, and two strong alternatives in case the first one does not click.</p>
+          </article>
+        </div>
+      </section>
     </main>
   </div>
+
   <div class="app-shell hidden" id="appView">
-    <aside class="sidebar"><div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.2 7.2h7.6a4.7 4.7 0 0 1 4.5 3.5l1 4a3.1 3.1 0 0 1-5.2 3l-1.2-1.2H9.1l-1.2 1.2a3.1 3.1 0 0 1-5.2-3l1-4a4.7 4.7 0 0 1 4.5-3.5Z"/><path d="M8 11v4M6 13h4M16.5 11.5h.01M18.5 14h.01"/></svg></span><span>What Should I Play?</span></div><nav class="side-nav" aria-label="App navigation"><button class="side-link active" data-page="home"><span class="icon"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10M9.5 20v-6h5v6"/></svg></span>Home</button><button class="side-link" data-page="connect"><span class="icon"><svg viewBox="0 0 24 24"><path d="M8 12h8M12 8v8"/><rect x="3" y="3" width="18" height="18" rx="5"/></svg></span>Connect library</button><button class="side-link" data-page="library"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 5v14M12 9h5M12 13h5"/></svg></span>My games</button><button class="side-link" data-page="quiz"><span class="icon"><svg viewBox="0 0 24 24"><path d="M9.1 9a3 3 0 1 1 4.7 2.5c-1.2.8-1.8 1.3-1.8 2.5M12 18h.01"/><circle cx="12" cy="12" r="9"/></svg></span>Find a game</button></nav><div class="sidebar-bottom"><div class="profile-chip"><span class="avatar">0</span><div><strong>Session only</strong><span>Nothing is saved</span></div></div><button class="side-link" id="clearSessionBtn"><span class="icon"><svg viewBox="0 0 24 24"><path d="M10 5H5v14h5M14 8l4 4-4 4M18 12H9"/></svg></span>Clear and exit</button></div></aside>
-    <main class="app-main"><div class="mobile-topbar"><div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.2 7.2h7.6a4.7 4.7 0 0 1 4.5 3.5l1 4a3.1 3.1 0 0 1-5.2 3l-1.2-1.2H9.1l-1.2 1.2a3.1 3.1 0 0 1-5.2-3l1-4a4.7 4.7 0 0 1 4.5-3.5Z"/><path d="M8 11v4M6 13h4M16.5 11.5h.01M18.5 14h.01"/></svg></span><span>WSIP?</span></div><button class="btn secondary small" id="mobileClearSession">Clear session</button></div><nav class="mobile-nav" aria-label="Mobile app navigation"><button class="side-link active" data-page="home">Home</button><button class="side-link" data-page="connect">Connect</button><button class="side-link" data-page="library">Games</button><button class="side-link" data-page="quiz">Find a game</button></nav>
-      <section class="page" id="homePage"><div class="page-header"><div><span class="eyebrow">Welcome back</span><h1>Ready when you are.</h1><p>Bring in your games, answer a few questions, and turn your backlog into tonight's plan.</p></div><button class="btn" data-go="quiz">Find my game</button></div><div class="stats-grid"><div class="stat-card"><span>Games in library</span><strong id="gameCount">0</strong></div><div class="stat-card"><span>Sources connected</span><strong id="sourceCount">0</strong></div><div class="stat-card"><span>Recommendations</span><strong id="recommendationCount">0</strong></div></div><div class="dashboard-grid"><div class="panel"><div class="panel-title"><h2>Your next move</h2></div><div class="empty-state" id="homeEmpty"><div class="empty-icon icon"><svg viewBox="0 0 24 24"><path d="M8.2 7.2h7.6a4.7 4.7 0 0 1 4.5 3.5l1 4a3.1 3.1 0 0 1-5.2 3l-1.2-1.2H9.1l-1.2 1.2a3.1 3.1 0 0 1-5.2-3l1-4a4.7 4.7 0 0 1 4.5-3.5Z"/><path d="M8 11v4M6 13h4M16.5 11.5h.01M18.5 14h.01"/></svg></div><h3>Add your first games</h3><p>Upload your own library file or connect Steam once the serverless bridge is online. Everything is held only for this browser session.</p><button class="btn" data-go="connect">Connect a library</button></div><div class="recent-card hidden" id="homeReady"><div class="mini-cover"></div><h3>Your library is ready.</h3><p id="homeReadyCopy">Answer 12 quick questions and we will rank the games that fit right now.</p><button class="btn small" style="margin-top:16px" data-go="quiz">Start the mood check</button></div></div><aside class="panel"><div class="panel-title"><h2>How your data works</h2></div><p class="muted" style="line-height:1.65;margin-top:0">Your library and answers remain in this tab's memory. Closing or clearing the session removes them.</p><div class="tag-row"><span class="tag">No account</span><span class="tag">No database</span><span class="tag">Session only</span></div></aside></div></section>
-      <section class="page hidden" id="connectPage"><div class="page-header"><div><span class="eyebrow">Your library</span><h1>Bring your games together.</h1><p>Choose the source that works for you. Each option includes instructions before you connect or upload anything.</p></div></div><div class="source-grid">
-        <article class="source-card"><div class="source-head"><span class="source-logo">P</span><span class="status-pill">Recommended</span></div><h3>Playnite</h3><p>Sign into your launchers through Playnite, export the unified library, and load every title into this session at once.</p><button class="btn secondary full" data-source="playnite">Connect with Playnite</button></article>
-        <article class="source-card"><div class="source-head"><span class="source-logo">S</span><span class="status-pill" id="steamStatus">Setup needed</span></div><h3>Steam</h3><p>Sign in through Steam for this session and read your visible owned games. No Steam password or library is stored by us.</p><button class="btn secondary full" data-source="steam">View Steam setup</button></article>
-        <article class="source-card"><div class="source-head"><span class="source-logo">E</span><span class="status-pill">Local import</span></div><h3>Epic Games</h3><p>Load your Epic library through a local Playnite export or the planned desktop bridge. Nothing is uploaded or retained.</p><button class="btn secondary full" data-source="epic">View Epic setup</button></article>
-        <article class="source-card"><div class="source-head"><span class="source-logo">EA</span><span class="status-pill">Local import</span></div><h3>EA app</h3><p>Bring in EA titles from Playnite or a local bridge. Origin libraries are handled through the EA app.</p><button class="btn secondary full" data-source="ea">View EA setup</button></article>
-        <article class="source-card"><div class="source-head"><span class="source-logo">G</span><span class="status-pill">Local import</span></div><h3>GOG</h3><p>Load GOG games from a local library export without sending your GOG login or library to this site.</p><button class="btn secondary full" data-source="gog">View GOG setup</button></article>
-        <article class="source-card"><div class="source-head"><span class="source-logo">U</span><span class="status-pill">Local import</span></div><h3>Ubisoft Connect</h3><p>Use Playnite or the planned local bridge to read your Ubisoft collection into this temporary session.</p><button class="btn secondary full" data-source="ubisoft">View Ubisoft setup</button></article>
-        <article class="source-card"><div class="source-head"><span class="source-logo">B</span><span class="status-pill">Local import</span></div><h3>Battle.net</h3><p>Add Blizzard games from a local Playnite export. The browser receives game information only.</p><button class="btn secondary full" data-source="battlenet">View Battle.net setup</button></article>
-        <article class="source-card"><div class="source-head"><span class="source-logo">CSV</span><span class="status-pill" id="csvStatus">Ready</span></div><h3>CSV file</h3><p>Upload a spreadsheet exported from Playnite or maintained by you. A game name is the only required field.</p><button class="btn secondary full" data-source="csv">Import CSV</button></article>
-        <article class="source-card"><div class="source-head"><span class="source-logo">{ }</span><span class="status-pill" id="jsonStatus">Ready</span></div><h3>JSON file</h3><p>Import a richer library with genres, moods, session length, multiplayer support, and installed status.</p><button class="btn secondary full" data-source="json">Import JSON</button></article>
-      </div></section>
-      <section class="page hidden" id="libraryPage"><div class="page-header"><div><span class="eyebrow">Personal collection</span><h1>My games</h1><p>Only games loaded into this temporary browser session are considered.</p></div><button class="btn" data-go="connect">Add games</button></div><div class="library-toolbar"><input class="search-input" id="librarySearch" type="search" placeholder="Search your library"></div><div class="game-list" id="gameList"></div><div class="empty-state" id="libraryEmpty"><h3>No games yet</h3><p>Connect Steam or upload your own CSV or JSON file to start matching.</p><button class="btn" data-go="connect">Choose a source</button></div></section>
-      <section class="page hidden" id="quizPage"><div class="quiz-wrap"><div id="quizContent"><div class="progress-meta"><span id="questionNumber">Question 1 of 12</span><span id="progressPercent">8%</span></div><div class="progress-track"><div class="progress-fill" id="progressFill" style="width:8%"></div></div><div class="question-card"><span class="eyebrow">Right now</span><h2 id="questionTitle"></h2><p id="questionHelp"></p><div class="options" id="questionOptions"></div><div class="quiz-actions"><button class="btn secondary" id="quizBack">Back</button><button class="btn" id="quizNext" disabled>Next question</button></div></div></div><div class="empty-state hidden" id="quizNoGames"><h3>Your quiz needs a library</h3><p>Add at least one game first. The recommendation engine only chooses from games loaded for this session.</p><button class="btn" data-go="connect">Add my games</button></div></div></section>
-      <section class="page hidden" id="resultPage"><div class="result-layout"><div class="result-cover" id="resultCover"><span class="score-badge" id="resultScore">Best match</span><h2 id="resultGame">Your game</h2></div><div class="result-copy"><span class="eyebrow">Tonight's answer</span><h1>Play <span id="resultGameInline">this one</span>.</h1><p id="resultReason"></p><ul class="why-list" id="whyList"></ul><div class="tag-row" id="resultTags"></div><div class="alternatives" id="alternatives"></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px"><button class="btn" data-go="quiz" id="retakeBtn">Retake the quiz</button><button class="btn secondary" data-go="library">View my library</button></div></div></div></section>
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8.2 7.2h7.6a4.7 4.7 0 0 1 4.5 3.5l1 4a3.1 3.1 0 0 1-5.2 3l-1.2-1.2H9.1l-1.2 1.2a3.1 3.1 0 0 1-5.2-3l1-4a4.7 4.7 0 0 1 4.5-3.5Z"/><path d="M8 11v4M6 13h4M16.5 11.5h.01M18.5 14h.01"/></svg>
+        </span>
+        <span>What Should I Play?</span>
+      </div>
+      <nav class="side-nav" aria-label="App navigation">
+        <button class="side-link active" data-page="home">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10M9.5 20v-6h5v6"/></svg></span>
+          Home
+        </button>
+        <button class="side-link" data-page="connect">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M8 12h8M12 8v8"/><rect x="3" y="3" width="18" height="18" rx="5"/></svg></span>
+          Connect library
+        </button>
+        <button class="side-link" data-page="library">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 5v14M12 9h5M12 13h5"/></svg></span>
+          My games
+        </button>
+        <button class="side-link" data-page="quiz">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M9.1 9a3 3 0 1 1 4.7 2.5c-1.2.8-1.8 1.3-1.8 2.5M12 18h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+          Find a game
+        </button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="profile-chip">
+          <span class="avatar">0</span>
+          <div>
+            <strong>Session only</strong>
+            <span>Nothing is saved</span>
+          </div>
+        </div>
+        <button class="side-link" id="clearSessionBtn">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M10 5H5v14h5M14 8l4 4-4 4M18 12H9"/></svg></span>
+          Clear and exit
+        </button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <div class="mobile-topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8.2 7.2h7.6a4.7 4.7 0 0 1 4.5 3.5l1 4a3.1 3.1 0 0 1-5.2 3l-1.2-1.2H9.1l-1.2 1.2a3.1 3.1 0 0 1-5.2-3l1-4a4.7 4.7 0 0 1 4.5-3.5Z"/><path d="M8 11v4M6 13h4M16.5 11.5h.01M18.5 14h.01"/></svg>
+          </span>
+          <span>WSIP?</span>
+        </div>
+        <button class="btn secondary small" id="mobileClearSession">Clear session</button>
+      </div>
+      <nav class="mobile-nav" aria-label="Mobile app navigation">
+        <button class="side-link active" data-page="home">Home</button>
+        <button class="side-link" data-page="connect">Connect</button>
+        <button class="side-link" data-page="library">Games</button>
+        <button class="side-link" data-page="quiz">Find a game</button>
+      </nav>
+
+      <section class="page" id="homePage">
+        <div class="page-header">
+          <div>
+            <span class="eyebrow">Welcome back</span>
+            <h1>Ready when you are.</h1>
+            <p>Bring in your games, answer a few questions, and turn your backlog into tonight's plan.</p>
+          </div>
+          <button class="btn" data-go="quiz">Find my game</button>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><span>Games in library</span><strong id="gameCount">0</strong></div>
+          <div class="stat-card"><span>Sources connected</span><strong id="sourceCount">0</strong></div>
+          <div class="stat-card"><span>Recommendations</span><strong id="recommendationCount">0</strong></div>
+        </div>
+        <div class="dashboard-grid">
+          <div class="panel">
+            <div class="panel-title"><h2>Your next move</h2></div>
+            <div class="empty-state" id="homeEmpty">
+              <div class="empty-icon icon"><svg viewBox="0 0 24 24"><path d="M8.2 7.2h7.6a4.7 4.7 0 0 1 4.5 3.5l1 4a3.1 3.1 0 0 1-5.2 3l-1.2-1.2H9.1l-1.2 1.2a3.1 3.1 0 0 1-5.2-3l1-4a4.7 4.7 0 0 1 4.5-3.5Z"/><path d="M8 11v4M6 13h4M16.5 11.5h.01M18.5 14h.01"/></svg></div>
+              <h3>Add your first games</h3>
+              <p>Connect Playnite or upload your own library file. Everything is held only for this browser session.</p>
+              <button class="btn" data-go="connect">Connect a library</button>
+            </div>
+            <div class="recent-card hidden" id="homeReady">
+              <div class="mini-cover"></div>
+              <h3>Your library is ready.</h3>
+              <p id="homeReadyCopy">Answer 12 quick questions and we will rank the games that fit right now.</p>
+              <button class="btn small" style="margin-top:16px" data-go="quiz">Start the mood check</button>
+            </div>
+          </div>
+          <aside class="panel">
+            <div class="panel-title"><h2>How your data works</h2></div>
+            <p class="muted" style="line-height:1.65;margin-top:0">Your library and answers remain in this tab's memory. Closing or clearing the session removes them.</p>
+            <div class="tag-row">
+              <span class="tag">No account</span>
+              <span class="tag">No database</span>
+              <span class="tag">Session only</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page hidden" id="connectPage">
+        <div class="page-header">
+          <div>
+            <span class="eyebrow">Your library</span>
+            <h1>Bring your games together.</h1>
+            <p>Choose the source that works for you. Each option includes instructions before you connect or upload anything.</p>
+          </div>
+        </div>
+        <div class="source-grid">
+          <article class="source-card">
+            <div class="source-head"><span class="source-logo">P</span><span class="status-pill" id="playniteStatus">Open Playnite</span></div>
+            <h3>Playnite</h3>
+            <p>Use the companion extension to read your unified local library directly. Playnite does not need to export a file.</p>
+            <button class="btn secondary full" data-source="playnite">Connect with Playnite</button>
+          </article>
+          <article class="source-card">
+            <div class="source-head"><span class="source-logo">CSV</span><span class="status-pill" id="csvStatus">Ready</span></div>
+            <h3>CSV file</h3>
+            <p>Upload a spreadsheet maintained by you. A game name is the only required field.</p>
+            <button class="btn secondary full" data-source="csv">Import CSV</button>
+          </article>
+          <article class="source-card">
+            <div class="source-head"><span class="source-logo">{ }</span><span class="status-pill" id="jsonStatus">Ready</span></div>
+            <h3>JSON file</h3>
+            <p>Import a richer library with genres, moods, session length, multiplayer support, and installed status.</p>
+            <button class="btn secondary full" data-source="json">Import JSON</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="page hidden" id="libraryPage">
+        <div class="page-header">
+          <div>
+            <span class="eyebrow">Personal collection</span>
+            <h1>My games</h1>
+            <p>Only games loaded into this temporary browser session are considered.</p>
+          </div>
+          <button class="btn" data-go="connect">Add games</button>
+        </div>
+        <div class="library-toolbar">
+          <input class="search-input" id="librarySearch" type="search" placeholder="Search your library">
+        </div>
+        <div class="game-list" id="gameList"></div>
+        <div class="empty-state" id="libraryEmpty">
+          <h3>No games yet</h3>
+          <p>Connect Playnite or upload your own CSV or JSON file to start matching.</p>
+          <button class="btn" data-go="connect">Choose a source</button>
+        </div>
+      </section>
+
+      <section class="page hidden" id="quizPage">
+        <div class="quiz-wrap">
+          <div id="quizContent">
+            <div class="progress-meta"><span id="questionNumber">Question 1 of 12</span><span id="progressPercent">8%</span></div>
+            <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:8%"></div></div>
+            <div class="question-card">
+              <span class="eyebrow">Right now</span>
+              <h2 id="questionTitle"></h2>
+              <p id="questionHelp"></p>
+              <div class="options" id="questionOptions"></div>
+              <div class="quiz-actions">
+                <button class="btn secondary" id="quizBack">Back</button>
+                <button class="btn" id="quizNext" disabled>Next question</button>
+              </div>
+            </div>
+          </div>
+          <div class="empty-state hidden" id="quizNoGames">
+            <h3>Your quiz needs a library</h3>
+            <p>Add at least one game first. The recommendation engine only chooses from games loaded for this session.</p>
+            <button class="btn" data-go="connect">Add my games</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page hidden" id="resultPage">
+        <div class="result-layout">
+          <div class="result-cover" id="resultCover">
+            <span class="score-badge" id="resultScore">Best match</span>
+            <h2 id="resultGame">Your game</h2>
+          </div>
+          <div class="result-copy">
+            <span class="eyebrow">Tonight's answer</span>
+            <h1>Play <span id="resultGameInline">this one</span>.</h1>
+            <p id="resultReason"></p>
+            <ul class="why-list" id="whyList"></ul>
+            <div class="tag-row" id="resultTags"></div>
+            <div class="alternatives" id="alternatives"></div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px">
+              <button class="btn" data-go="quiz" id="retakeBtn">Retake the quiz</button>
+              <button class="btn secondary" data-go="library">View my library</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
-  <div class="drawer-backdrop hidden" id="sourceDrawer"><aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle"><button class="close-btn" id="closeDrawer" aria-label="Close" style="float:right">&times;</button><span class="eyebrow" id="drawerEyebrow">Library source</span><h2 id="drawerTitle">Connect a source</h2><p id="drawerIntro"></p><div id="drawerContent"></div></aside></div>
+
+  <div class="drawer-backdrop hidden" id="sourceDrawer">
+    <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <button class="close-btn" id="closeDrawer" aria-label="Close" style="float:right">&times;</button>
+      <span class="eyebrow" id="drawerEyebrow">Library source</span>
+      <h2 id="drawerTitle">Connect a source</h2>
+      <p id="drawerIntro"></p>
+      <div id="drawerContent"></div>
+    </aside>
+  </div>
+
   <div class="toast" id="toast" role="status"></div>
+
   <script src="app.js"></script>
+  <script src="playnite-bridge.js"></script>
 </body>
 </html>

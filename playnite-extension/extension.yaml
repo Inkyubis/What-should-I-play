@@ -1,0 +1,11 @@
+Id: WhatShouldIPlayBridge_8E78D02994FB43E4A7466F058A2D57CB
+Name: What Should I Play? Bridge
+Author: Inkyubis
+Version: 0.4.0
+Module: WhatShouldIPlayBridge.dll
+Type: GenericPlugin
+Links:
+    - Name: Website
+      Url: https://inkyubis.github.io/What-should-I-play/
+    - Name: Source
+      Url: https://github.com/Inkyubis/What-should-I-play
