@@ -697,6 +697,29 @@
     .alt-card { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255, 255, 255, 0.025); }
     .alt-card strong { display: block; margin-bottom: 4px; }
     .alt-card span { color: var(--muted); font-size: 12px; }
+    .exclusion-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 22px;
+      padding: 12px 14px;
+      border: 1px solid rgba(201, 255, 87, 0.18);
+      border-radius: 16px;
+      color: var(--muted);
+      background: rgba(201, 255, 87, 0.055);
+      font-size: 13px;
+    }
+    .link-button {
+      padding: 0;
+      border: 0;
+      color: var(--lime);
+      background: transparent;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .result-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
 
     .toast {
       position: fixed;

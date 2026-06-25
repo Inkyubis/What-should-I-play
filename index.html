@@ -276,7 +276,12 @@
             <ul class="why-list" id="whyList"></ul>
             <div class="tag-row" id="resultTags"></div>
             <div class="alternatives" id="alternatives"></div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px">
+            <div class="exclusion-panel hidden" id="exclusionPanel">
+              <span id="excludedCount">0 games excluded this session</span>
+              <button class="link-button" id="resetExcludedBtn" type="button">Reset excluded games</button>
+            </div>
+            <div class="result-actions">
+              <button class="btn secondary" id="excludeResultBtn" type="button">Exclude this game</button>
               <button class="btn" data-go="quiz" id="retakeBtn">Retake the quiz</button>
               <button class="btn secondary" data-go="library">View my library</button>
             </div>

@@ -98,10 +98,11 @@
       ]}
     ];
 
-    let state = { games: [], recommendationCount: 0, playniteConnected: false };
+    let state = { games: [], recommendationCount: 0, playniteConnected: false, excludedGames: [] };
     let currentQuestion = 0;
     let answers = {};
     let activeSource = null;
+    let currentResultName = "";
 
     const landingView = document.getElementById("landingView");
     const appView = document.getElementById("appView");
@@ -127,8 +128,9 @@
     }
 
     function clearSession() {
-      state = { games: [], recommendationCount: 0, playniteConnected: false };
+      state = { games: [], recommendationCount: 0, playniteConnected: false, excludedGames: [] };
       answers = {};
+      currentResultName = "";
       appView.classList.add("hidden");
       landingView.classList.remove("hidden");
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -150,6 +152,7 @@
       document.getElementById("gameCount").textContent = state.games.length;
       document.getElementById("sourceCount").textContent = sources.size;
       document.getElementById("recommendationCount").textContent = state.recommendationCount || 0;
+      renderExclusionPanel();
       document.getElementById("homeEmpty").classList.toggle("hidden", state.games.length > 0);
       document.getElementById("homeReady").classList.toggle("hidden", state.games.length === 0);
       document.getElementById("homeReadyCopy").textContent = `${state.games.length} games are ready to rank. Answer 12 quick questions and we will find the best fit.`;
@@ -187,6 +190,7 @@
       document.querySelectorAll("[data-remove]").forEach(button => {
         button.addEventListener("click", () => {
           state.games.splice(Number(button.dataset.remove), 1);
+          syncExcludedGames();
           renderAll();
           showToast("Game removed from this profile");
         });
@@ -560,8 +564,19 @@
     }
 
     function showResult() {
-      const ranked = state.games.map(scoreGame).sort((a, b) => b.score - a.score);
+      const excluded = getExcludedNames();
+      const ranked = state.games
+        .filter(game => !excluded.has(game.name.toLowerCase()))
+        .map(scoreGame)
+        .sort((a, b) => b.score - a.score);
+      if (!ranked.length) {
+        showToast("Every loaded game is excluded for this session");
+        renderExclusionPanel();
+        navigate("library");
+        return;
+      }
       const best = ranked[0];
+      currentResultName = best.game.name;
       const maxReasonable = 30;
       const match = Math.max(62, Math.min(98, Math.round(68 + (best.score / maxReasonable) * 30)));
       const palette = coverPalette(best.game.name);
@@ -583,6 +598,44 @@
       state.recommendationCount = (state.recommendationCount || 0) + 1;
       renderAll();
       navigate("result");
+    }
+
+    function getExcludedNames() {
+      return new Set((state.excludedGames || []).map(name => name.toLowerCase()));
+    }
+
+    function syncExcludedGames() {
+      const loadedNames = new Set(state.games.map(game => game.name.toLowerCase()));
+      state.excludedGames = (state.excludedGames || []).filter(name => loadedNames.has(name.toLowerCase()));
+    }
+
+    function renderExclusionPanel() {
+      const excludedCount = (state.excludedGames || []).length;
+      const panel = document.getElementById("exclusionPanel");
+      const count = document.getElementById("excludedCount");
+      if (!panel || !count) return;
+      panel.classList.toggle("hidden", excludedCount === 0);
+      count.textContent = `${excludedCount} game${excludedCount === 1 ? "" : "s"} excluded this session`;
+    }
+
+    function excludeCurrentResult() {
+      if (!currentResultName) return;
+      const existing = getExcludedNames();
+      if (!existing.has(currentResultName.toLowerCase())) {
+        state.excludedGames = [...(state.excludedGames || []), currentResultName];
+      }
+      const skipped = currentResultName;
+      showToast(`${skipped} excluded for this session`);
+      showResult();
+    }
+
+    function resetExcludedGames() {
+      state.excludedGames = [];
+      renderExclusionPanel();
+      showToast("Excluded games reset");
+      if (!document.getElementById("resultPage").classList.contains("hidden")) {
+        showResult();
+      }
     }
 
     function buildReason(best) {
@@ -615,6 +668,8 @@
     document.getElementById("clearSessionBtn").addEventListener("click", clearSession);
     document.getElementById("mobileClearSession").addEventListener("click", clearSession);
     document.getElementById("librarySearch").addEventListener("input", event => renderLibrary(event.target.value));
+    document.getElementById("excludeResultBtn").addEventListener("click", excludeCurrentResult);
+    document.getElementById("resetExcludedBtn").addEventListener("click", resetExcludedGames);
 
     document.getElementById("quizBack").addEventListener("click", () => {
       if (currentQuestion > 0) {
